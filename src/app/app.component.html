@@ -5,6 +5,8 @@
         <button class="btn btn-primary m-2" (click)="currentSelected = 'badge'">Badge</button>
         <button class="btn btn-primary m-2" (click)="currentSelected = 'bottom-sheet'">Bottom Sheet</button>
         <button class="btn btn-primary m-2" (click)="currentSelected = 'button'">Button</button>
+        <button class="btn btn-primary m-2" (click)="currentSelected = 'button-toggle'">Button Toggle</button>
+
     </div>
 
 
@@ -24,6 +26,10 @@
 
         <ng-container *ngIf="currentSelected === 'button'">
             <app-button></app-button>
+        </ng-container>
+
+        <ng-container *ngIf="currentSelected === 'button-toggle'">
+            <app-button-toggle></app-button-toggle>
         </ng-container>
     </div>
 </div>

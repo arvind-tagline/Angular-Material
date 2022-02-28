@@ -18,6 +18,8 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatListModule } from '@angular/material/list';
 import { ButtonComponent } from './button/button.component';
 import { MatIconModule } from '@angular/material/icon';
+import { ButtonToggleComponent } from './button-toggle/button-toggle.component';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 // autocomplete modules import
 const autoComplete = [
@@ -39,9 +41,10 @@ const bottomSheet = [
   MatListModule
 ];
 
-//badge module import
+//button module import
 const button = [
-  MatIconModule
+  MatIconModule,
+  MatButtonToggleModule
 ];
 
 
@@ -58,7 +61,8 @@ const materialImports = [
     BadgeComponent,
     BottomSheetComponent,
     BottomSheetExampleComponent,
-    ButtonComponent
+    ButtonComponent,
+    ButtonToggleComponent
   ],
   imports: [
     CommonModule,
@@ -70,8 +74,8 @@ const materialImports = [
     AutocompleteComponent,
     BadgeComponent,
     BottomSheetComponent,
-    ButtonComponent
-
+    ButtonComponent,
+    ButtonToggleComponent
   ]
 })
 export class CoreModule { }
