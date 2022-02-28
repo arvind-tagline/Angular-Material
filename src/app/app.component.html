@@ -10,6 +10,7 @@
         <button class="btn btn-primary m-2" (click)="currentSelected = 'checkbox'">CheckBox</button>
         <button class="btn btn-primary m-2" (click)="currentSelected = 'chips'">Chips</button>
         <button class="btn btn-primary m-2" (click)="currentSelected = 'datepicker'">Datepicker</button>
+        <button class="btn btn-primary m-2" (click)="currentSelected = 'dialog'">Dialog</button>
 
 
     </div>
@@ -51,6 +52,10 @@
 
         <ng-container *ngIf="currentSelected === 'datepicker'">
             <app-datepicker></app-datepicker>
+        </ng-container>
+
+        <ng-container *ngIf="currentSelected === 'dialog'">
+            <app-dialog></app-dialog>
         </ng-container>
     </div>
 </div>

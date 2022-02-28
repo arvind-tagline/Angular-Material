@@ -29,6 +29,12 @@ import { MatChipsModule } from '@angular/material/chips';
 import { DatepickerComponent } from './datepicker/datepicker.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { DialogComponent } from './dialog/dialog.component';
+import { DialogExampleComponent } from './dialog-example/dialog-example.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 
 // autocomplete modules import
@@ -59,12 +65,14 @@ const button = [
 
 //Card module import
 const card = [
-  MatCardModule
+  MatCardModule,
+  MatProgressBarModule
 ];
 
 //CheckBox module import
 const checkbox = [
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatRadioModule
 ];
 
 //Chips module import
@@ -101,10 +109,13 @@ const materialImports = [
     CardComponent,
     CheckboxComponent,
     ChipsComponent,
-    DatepickerComponent
+    DatepickerComponent,
+    DialogComponent,
+    DialogExampleComponent,
   ],
   imports: [
     CommonModule,
+    MatDialogModule,
     FormsModule,
     ReactiveFormsModule,
     ...materialImports
@@ -118,7 +129,8 @@ const materialImports = [
     CardComponent,
     CheckboxComponent,
     ChipsComponent,
-    DatepickerComponent
+    DatepickerComponent,
+    DialogComponent
   ]
 })
 export class CoreModule { }
