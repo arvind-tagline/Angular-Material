@@ -1,2 +1,7 @@
-<!-- <mat-slider min="1" max="100" step="1" value="50"></mat-slider> -->
+<button (click)="currentSelected = 'autocomplete'">autocomplete</button>
+
+<ng-container *ngIf="currentSelected === 'autocomplete'">
+    <app-autocomplete></app-autocomplete>
+</ng-container>
+
 <router-outlet></router-outlet>
