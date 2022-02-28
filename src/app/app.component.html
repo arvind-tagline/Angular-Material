@@ -9,7 +9,7 @@
         <button class="btn btn-primary m-2" (click)="currentSelected = 'card'">Card</button>
         <button class="btn btn-primary m-2" (click)="currentSelected = 'checkbox'">CheckBox</button>
         <button class="btn btn-primary m-2" (click)="currentSelected = 'chips'">Chips</button>
-
+        <button class="btn btn-primary m-2" (click)="currentSelected = 'datepicker'">Datepicker</button>
 
 
     </div>
@@ -47,6 +47,10 @@
 
         <ng-container *ngIf="currentSelected === 'chips'">
             <app-chips></app-chips>
+        </ng-container>
+
+        <ng-container *ngIf="currentSelected === 'datepicker'">
+            <app-datepicker></app-datepicker>
         </ng-container>
     </div>
 </div>

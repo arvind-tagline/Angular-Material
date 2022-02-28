@@ -26,6 +26,9 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ChipsComponent } from './chips/chips.component';
 import { MatChipsModule } from '@angular/material/chips';
+import { DatepickerComponent } from './datepicker/datepicker.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 // autocomplete modules import
@@ -67,7 +70,13 @@ const checkbox = [
 //Chips module import
 const chips = [
   MatChipsModule
-]
+];
+
+//DatePicker module import
+const datepicker = [
+  MatDatepickerModule,
+  MatNativeDateModule
+];
 
 
 const materialImports = [
@@ -77,7 +86,8 @@ const materialImports = [
   ...button,
   ...card,
   ...checkbox,
-  ...chips
+  ...chips,
+  ...datepicker
 ];
 
 @NgModule({
@@ -90,7 +100,8 @@ const materialImports = [
     ButtonToggleComponent,
     CardComponent,
     CheckboxComponent,
-    ChipsComponent
+    ChipsComponent,
+    DatepickerComponent
   ],
   imports: [
     CommonModule,
@@ -106,7 +117,8 @@ const materialImports = [
     ButtonToggleComponent,
     CardComponent,
     CheckboxComponent,
-    ChipsComponent
+    ChipsComponent,
+    DatepickerComponent
   ]
 })
 export class CoreModule { }
