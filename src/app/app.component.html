@@ -1,13 +1,24 @@
 <div class="container-fluid">
 
     <div class="m-2">
-        <button class="btn btn-primary" (click)="currentSelected = 'autocomplete'">autocomplete</button>
+        <button class="btn btn-primary m-2" (click)="currentSelected = 'autocomplete'">Autocomplete</button>
+        <button class="btn btn-primary m-2" (click)="currentSelected = 'badge'">Badge</button>
+        <button class="btn btn-primary m-2" (click)="currentSelected = 'bottom-sheet'">Bottom Sheet</button>
     </div>
 
 
     <div>
         <ng-container *ngIf="currentSelected === 'autocomplete'">
             <app-autocomplete></app-autocomplete>
+        </ng-container>
+
+
+        <ng-container *ngIf="currentSelected === 'badge'">
+            <app-badge></app-badge>
+        </ng-container>
+
+        <ng-container *ngIf="currentSelected === 'bottom-sheet'">
+            <app-bottom-sheet></app-bottom-sheet>
         </ng-container>
     </div>
 </div>

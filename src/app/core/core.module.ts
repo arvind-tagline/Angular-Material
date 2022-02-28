@@ -10,7 +10,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatRippleModule } from '@angular/material/core';
-
+import { BadgeComponent } from './badge/badge.component';
+import { MatBadgeModule } from '@angular/material/badge';
+import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
+import { BottomSheetExampleComponent } from './bottom-sheet-example/bottom-sheet-example.component';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatListModule } from '@angular/material/list';
 
 // autocomplete modules import
 const autoComplete = [
@@ -21,14 +26,29 @@ const autoComplete = [
   MatRippleModule
 ];
 
+//badge module import
+const badge = [
+  MatBadgeModule
+];
+
+const bottomSheet = [
+  MatBottomSheetModule,
+  MatListModule
+];
+
 
 const materialImports = [
-  ...autoComplete
+  ...autoComplete,
+  ...badge,
+  ...bottomSheet
 ];
 
 @NgModule({
   declarations: [
-    AutocompleteComponent
+    AutocompleteComponent,
+    BadgeComponent,
+    BottomSheetComponent,
+    BottomSheetExampleComponent
   ],
   imports: [
     CommonModule,
@@ -36,6 +56,9 @@ const materialImports = [
     ReactiveFormsModule,
     ...materialImports
   ],
-  exports: [AutocompleteComponent]
+  exports: [
+    AutocompleteComponent,
+    BadgeComponent,
+    BottomSheetComponent]
 })
 export class CoreModule { }
