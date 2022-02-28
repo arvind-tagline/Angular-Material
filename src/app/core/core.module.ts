@@ -16,6 +16,8 @@ import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
 import { BottomSheetExampleComponent } from './bottom-sheet-example/bottom-sheet-example.component';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatListModule } from '@angular/material/list';
+import { ButtonComponent } from './button/button.component';
+import { MatIconModule } from '@angular/material/icon';
 
 // autocomplete modules import
 const autoComplete = [
@@ -31,16 +33,23 @@ const badge = [
   MatBadgeModule
 ];
 
+//bottom-sheet import
 const bottomSheet = [
   MatBottomSheetModule,
   MatListModule
+];
+
+//badge module import
+const button = [
+  MatIconModule
 ];
 
 
 const materialImports = [
   ...autoComplete,
   ...badge,
-  ...bottomSheet
+  ...bottomSheet,
+  ...button
 ];
 
 @NgModule({
@@ -48,7 +57,8 @@ const materialImports = [
     AutocompleteComponent,
     BadgeComponent,
     BottomSheetComponent,
-    BottomSheetExampleComponent
+    BottomSheetExampleComponent,
+    ButtonComponent
   ],
   imports: [
     CommonModule,
@@ -59,6 +69,9 @@ const materialImports = [
   exports: [
     AutocompleteComponent,
     BadgeComponent,
-    BottomSheetComponent]
+    BottomSheetComponent,
+    ButtonComponent
+
+  ]
 })
 export class CoreModule { }
