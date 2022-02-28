@@ -16,10 +16,12 @@ export interface Task {
 })
 export class CheckboxComponent implements OnInit {
 
+
+  public allComplete: boolean = false;
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   task: Task = {
     name: 'Indeterminate',
@@ -32,20 +34,19 @@ export class CheckboxComponent implements OnInit {
     ],
   };
 
-  allComplete: boolean = false;
 
-  updateAllComplete() {
+  public updateAllComplete(): void {
     this.allComplete = this.task.subtasks != null && this.task.subtasks.every(t => t.completed);
   }
 
-  someComplete(): boolean {
+  public someComplete(): boolean {
     if (this.task.subtasks == null) {
       return false;
     }
     return this.task.subtasks.filter(t => t.completed).length > 0 && !this.allComplete;
   }
 
-  setAll(completed: boolean) {
+  public setAll(completed: boolean): void {
     this.allComplete = completed;
     if (this.task.subtasks == null) {
       return;

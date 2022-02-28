@@ -24,6 +24,8 @@ import { CardComponent } from './card/card.component';
 import { MatCardModule } from '@angular/material/card';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { ChipsComponent } from './chips/chips.component';
+import { MatChipsModule } from '@angular/material/chips';
 
 
 // autocomplete modules import
@@ -56,10 +58,16 @@ const button = [
 const card = [
   MatCardModule
 ];
-//Card module import
+
+//CheckBox module import
 const checkbox = [
   MatCheckboxModule
 ];
+
+//Chips module import
+const chips = [
+  MatChipsModule
+]
 
 
 const materialImports = [
@@ -68,7 +76,8 @@ const materialImports = [
   ...bottomSheet,
   ...button,
   ...card,
-  ...checkbox
+  ...checkbox,
+  ...chips
 ];
 
 @NgModule({
@@ -80,7 +89,8 @@ const materialImports = [
     ButtonComponent,
     ButtonToggleComponent,
     CardComponent,
-    CheckboxComponent
+    CheckboxComponent,
+    ChipsComponent
   ],
   imports: [
     CommonModule,
@@ -95,7 +105,8 @@ const materialImports = [
     ButtonComponent,
     ButtonToggleComponent,
     CardComponent,
-    CheckboxComponent
+    CheckboxComponent,
+    ChipsComponent
   ]
 })
 export class CoreModule { }

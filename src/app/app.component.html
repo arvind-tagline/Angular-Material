@@ -8,6 +8,8 @@
         <button class="btn btn-primary m-2" (click)="currentSelected = 'button-toggle'">Button Toggle</button>
         <button class="btn btn-primary m-2" (click)="currentSelected = 'card'">Card</button>
         <button class="btn btn-primary m-2" (click)="currentSelected = 'checkbox'">CheckBox</button>
+        <button class="btn btn-primary m-2" (click)="currentSelected = 'chips'">Chips</button>
+
 
 
     </div>
@@ -41,6 +43,10 @@
 
         <ng-container *ngIf="currentSelected === 'checkbox'">
             <app-checkbox></app-checkbox>
+        </ng-container>
+
+        <ng-container *ngIf="currentSelected === 'chips'">
+            <app-chips></app-chips>
         </ng-container>
     </div>
 </div>
