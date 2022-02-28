@@ -22,6 +22,8 @@ import { ButtonToggleComponent } from './button-toggle/button-toggle.component';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { CardComponent } from './card/card.component';
 import { MatCardModule } from '@angular/material/card';
+import { CheckboxComponent } from './checkbox/checkbox.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 // autocomplete modules import
@@ -54,6 +56,10 @@ const button = [
 const card = [
   MatCardModule
 ];
+//Card module import
+const checkbox = [
+  MatCheckboxModule
+];
 
 
 const materialImports = [
@@ -61,7 +67,8 @@ const materialImports = [
   ...badge,
   ...bottomSheet,
   ...button,
-  ...card
+  ...card,
+  ...checkbox
 ];
 
 @NgModule({
@@ -72,7 +79,8 @@ const materialImports = [
     BottomSheetExampleComponent,
     ButtonComponent,
     ButtonToggleComponent,
-    CardComponent
+    CardComponent,
+    CheckboxComponent
   ],
   imports: [
     CommonModule,
@@ -86,7 +94,8 @@ const materialImports = [
     BottomSheetComponent,
     ButtonComponent,
     ButtonToggleComponent,
-    CardComponent
+    CardComponent,
+    CheckboxComponent
   ]
 })
 export class CoreModule { }
