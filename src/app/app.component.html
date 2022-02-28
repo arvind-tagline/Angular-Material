@@ -1,7 +1,15 @@
-<button (click)="currentSelected = 'autocomplete'">autocomplete</button>
+<div class="container-fluid">
 
-<ng-container *ngIf="currentSelected === 'autocomplete'">
-    <app-autocomplete></app-autocomplete>
-</ng-container>
+    <div class="m-2">
+        <button class="btn btn-primary" (click)="currentSelected = 'autocomplete'">autocomplete</button>
+    </div>
+
+
+    <div>
+        <ng-container *ngIf="currentSelected === 'autocomplete'">
+            <app-autocomplete></app-autocomplete>
+        </ng-container>
+    </div>
+</div>
 
 <router-outlet></router-outlet>
