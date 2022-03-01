@@ -14,8 +14,7 @@
         <button class="btn btn-primary m-2" (click)="currentSelected = 'divider'">Divider</button>
         <button class="btn btn-primary m-2" (click)="currentSelected = 'expansionPanel'">ExpansionPanel</button>
         <button class="btn btn-primary m-2" (click)="currentSelected = 'formField'">Form Field</button>
-
-
+        <button class="btn btn-primary m-2" (click)="currentSelected = 'gridList'">Grid List</button>
     </div>
 
 
@@ -71,6 +70,10 @@
 
         <ng-container *ngIf="currentSelected === 'formField'">
             <app-form-field></app-form-field>
+        </ng-container>
+
+        <ng-container *ngIf="currentSelected === 'gridList'">
+            <app-grid-list></app-grid-list>
         </ng-container>
     </div>
 </div>

@@ -1,0 +1,21 @@
+<div>
+    <h2>Multiple Grid with deffrent columns sizes</h2>
+    <mat-grid-list cols="4" rowHeight="100px">
+        <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
+            [style.background]="tile.color">
+            {{tile.text}}
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+
+<div class="mt-3">
+    <h2>Simple Grid</h2>
+    <mat-grid-list class="background-color" cols="3" rowHeight="2:1">
+        <mat-grid-tile>A</mat-grid-tile>
+        <mat-grid-tile>R</mat-grid-tile>
+        <mat-grid-tile>V</mat-grid-tile>
+        <mat-grid-tile>I</mat-grid-tile>
+        <mat-grid-tile>N</mat-grid-tile>
+        <mat-grid-tile>D</mat-grid-tile>
+    </mat-grid-list>
+</div>

@@ -38,6 +38,9 @@ import { DividerComponent } from './divider/divider.component';
 import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { FormFieldComponent } from './form-field/form-field.component';
+import { GridListComponent } from './grid-list/grid-list.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+
 
 
 
@@ -95,6 +98,10 @@ const expansionPanel = [
   MatExpansionModule
 ];
 
+const gridlist = [
+  MatGridListModule
+]
+
 
 const materialImports = [
   ...autoComplete,
@@ -105,7 +112,8 @@ const materialImports = [
   ...checkbox,
   ...chips,
   ...datepicker,
-  ...expansionPanel
+  ...expansionPanel,
+  ...gridlist
 ];
 
 @NgModule({
@@ -125,6 +133,7 @@ const materialImports = [
     DividerComponent,
     ExpansionPanelComponent,
     FormFieldComponent,
+    GridListComponent,
   ],
   imports: [
     CommonModule,
@@ -146,7 +155,8 @@ const materialImports = [
     DialogComponent,
     DividerComponent,
     ExpansionPanelComponent,
-    FormFieldComponent
+    FormFieldComponent,
+    GridListComponent
   ]
 })
 export class CoreModule { }
