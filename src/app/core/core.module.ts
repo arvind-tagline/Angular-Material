@@ -48,6 +48,10 @@ import { MatMenuModule } from '@angular/material/menu';
 import { PaginatorComponent } from './paginator/paginator.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSliderModule } from '@angular/material/slider';
+
 
 
 
@@ -118,6 +122,11 @@ const menu = [
   MatMenuModule
 ];
 
+const spinner = [
+  MatProgressSpinnerModule,
+  MatSliderModule //For slider
+];
+
 const materialImports = [
   ...autoComplete,
   ...badge,
@@ -129,7 +138,8 @@ const materialImports = [
   ...datepicker,
   ...expansionPanel,
   ...gridlist,
-  ...menu
+  ...menu,
+  ...spinner
 ];
 
 @NgModule({
@@ -156,6 +166,7 @@ const materialImports = [
     MenuComponent,
     PaginatorComponent,
     ProgressBarComponent,
+    ProgressSpinnerComponent,
   ],
   imports: [
     CommonModule,
@@ -186,6 +197,7 @@ const materialImports = [
     MenuComponent,
     PaginatorComponent,
     ProgressBarComponent,
+    ProgressSpinnerComponent
   ]
 })
 export class CoreModule { }

@@ -21,6 +21,7 @@
         <button class="btn btn-primary m-2" (click)="currentSelected = 'menu'">Menu</button>
         <button class="btn btn-primary m-2" (click)="currentSelected = 'paginator'">Paginator</button>
         <button class="btn btn-primary m-2" (click)="currentSelected = 'progressBar'">Progress Bar</button>
+        <button class="btn btn-primary m-2" (click)="currentSelected = 'progressSpinner'">Progress Spinner</button>
 
 
     </div>
@@ -106,6 +107,10 @@
 
         <ng-container *ngIf="currentSelected === 'progressBar'">
             <app-progress-bar></app-progress-bar>
+        </ng-container>
+
+        <ng-container *ngIf="currentSelected === 'progressSpinner'">
+            <app-progress-spinner></app-progress-spinner>
         </ng-container>
     </div>
 </div>
