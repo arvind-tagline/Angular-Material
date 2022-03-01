@@ -42,6 +42,7 @@ import { GridListComponent } from './grid-list/grid-list.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { IconComponent } from './icon/icon.component';
 import { InputComponent } from './input/input.component';
+import { ListComponent } from './list/list.component';
 
 
 
@@ -138,6 +139,7 @@ const materialImports = [
     GridListComponent,
     IconComponent,
     InputComponent,
+    ListComponent,
   ],
   imports: [
     CommonModule,
@@ -163,6 +165,7 @@ const materialImports = [
     GridListComponent,
     IconComponent,
     InputComponent,
+    ListComponent
   ]
 })
 export class CoreModule { }

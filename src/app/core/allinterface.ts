@@ -20,3 +20,8 @@ export interface Tile {
     rows: number;
     text: string;
 }
+
+export interface Section {
+    name: string;
+    updated: Date;
+}
