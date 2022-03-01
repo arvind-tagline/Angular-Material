@@ -37,6 +37,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { DividerComponent } from './divider/divider.component';
 import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { FormFieldComponent } from './form-field/form-field.component';
 
 
 
@@ -123,6 +124,7 @@ const materialImports = [
     DialogExampleComponent,
     DividerComponent,
     ExpansionPanelComponent,
+    FormFieldComponent,
   ],
   imports: [
     CommonModule,
@@ -143,7 +145,8 @@ const materialImports = [
     DatepickerComponent,
     DialogComponent,
     DividerComponent,
-    ExpansionPanelComponent
+    ExpansionPanelComponent,
+    FormFieldComponent
   ]
 })
 export class CoreModule { }
