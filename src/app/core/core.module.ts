@@ -34,6 +34,7 @@ import { DialogExampleComponent } from './dialog-example/dialog-example.componen
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDialogModule } from '@angular/material/dialog';
+import { DividerComponent } from './divider/divider.component';
 
 
 
@@ -112,6 +113,7 @@ const materialImports = [
     DatepickerComponent,
     DialogComponent,
     DialogExampleComponent,
+    DividerComponent,
   ],
   imports: [
     CommonModule,
@@ -130,7 +132,8 @@ const materialImports = [
     CheckboxComponent,
     ChipsComponent,
     DatepickerComponent,
-    DialogComponent
+    DialogComponent,
+    DividerComponent
   ]
 })
 export class CoreModule { }

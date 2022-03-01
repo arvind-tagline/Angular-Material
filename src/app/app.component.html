@@ -11,6 +11,7 @@
         <button class="btn btn-primary m-2" (click)="currentSelected = 'chips'">Chips</button>
         <button class="btn btn-primary m-2" (click)="currentSelected = 'datepicker'">Datepicker</button>
         <button class="btn btn-primary m-2" (click)="currentSelected = 'dialog'">Dialog</button>
+        <button class="btn btn-primary m-2" (click)="currentSelected = 'divider'">Divider</button>
 
 
     </div>
@@ -56,6 +57,10 @@
 
         <ng-container *ngIf="currentSelected === 'dialog'">
             <app-dialog></app-dialog>
+        </ng-container>
+
+        <ng-container *ngIf="currentSelected === 'divider'">
+            <app-divider></app-divider>
         </ng-container>
     </div>
 </div>
