@@ -1,4 +1,5 @@
 <div class="container-fluid">
+    <h1 class="text-center m-4 fs-1 fw-bold"><u>Angular Material</u></h1>
     <div class="row m-2">
         <div class="col-sm-2">
             <button class="btn btn-primary m-2 w-100" (click)="currentSelected = 'autocomplete'">Autocomplete</button>
@@ -79,6 +80,9 @@
         </div>
         <div class="col-sm-2">
             <button class="btn btn-primary m-2 w-100" (click)="currentSelected = 'slideToggle'">Slide Toggle</button>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-primary m-2 w-100" (click)="currentSelected = 'slider'">Slider</button>
         </div>
 
     </div>
@@ -188,6 +192,10 @@
 
         <ng-container *ngIf="currentSelected === 'slideToggle'">
             <app-slide-toggle></app-slide-toggle>
+        </ng-container>
+
+        <ng-container *ngIf="currentSelected === 'slider'">
+            <app-slider></app-slider>
         </ng-container>
     </div>
 </div>

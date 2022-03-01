@@ -234,7 +234,8 @@ const materialImports = [
     RipplesComponent,
     SelectComponent,
     SidenavComponent,
-    SlideToggleComponent
+    SlideToggleComponent,
+    SliderComponent
   ]
 })
 export class CoreModule { }
