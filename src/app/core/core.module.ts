@@ -51,6 +51,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSliderModule } from '@angular/material/slider';
+import { RadioButtonComponent } from './radio-button/radio-button.component';
 
 
 
@@ -167,6 +168,7 @@ const materialImports = [
     PaginatorComponent,
     ProgressBarComponent,
     ProgressSpinnerComponent,
+    RadioButtonComponent,
   ],
   imports: [
     CommonModule,
@@ -197,7 +199,8 @@ const materialImports = [
     MenuComponent,
     PaginatorComponent,
     ProgressBarComponent,
-    ProgressSpinnerComponent
+    ProgressSpinnerComponent,
+    RadioButtonComponent
   ]
 })
 export class CoreModule { }
