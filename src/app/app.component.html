@@ -77,7 +77,9 @@
         <div class="col-sm-2">
             <button class="btn btn-primary m-2 w-100" (click)="currentSelected = 'sideNav'">SideNav</button>
         </div>
-
+        <div class="col-sm-2">
+            <button class="btn btn-primary m-2 w-100" (click)="currentSelected = 'slideToggle'">Slide Toggle</button>
+        </div>
 
     </div>
 
@@ -182,6 +184,10 @@
 
         <ng-container *ngIf="currentSelected === 'sideNav'">
             <app-sidenav></app-sidenav>
+        </ng-container>
+
+        <ng-container *ngIf="currentSelected === 'slideToggle'">
+            <app-slide-toggle></app-slide-toggle>
         </ng-container>
     </div>
 </div>

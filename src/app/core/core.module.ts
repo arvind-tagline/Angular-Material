@@ -57,9 +57,9 @@ import { SelectComponent } from './select/select.component';
 import { MatSelectModule } from '@angular/material/select';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
-
-
-
+import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { SliderComponent } from './slider/slider.component';
 
 
 
@@ -74,92 +74,98 @@ const matAutoComplete = [
   MatRippleModule
 ];
 
-//badge module import
-const badge = [
+//matBadge module import
+const matBadge = [
   MatBadgeModule
 ];
 
-//bottom-sheet import
-const bottomSheet = [
+//matBottomSheet import
+const matBottomSheet = [
   MatBottomSheetModule,
   MatListModule
 ];
 
-//button module import
-const button = [
+//matButton module import
+const matButton = [
   MatIconModule,
   MatButtonToggleModule
 ];
 
-//Card module import
-const card = [
+//matCard module import
+const matCard = [
   MatCardModule,
   MatProgressBarModule
 ];
 
-//CheckBox module import
-const checkbox = [
+//matCheckBox module import
+const matCheckBox = [
   MatCheckboxModule,
   MatRadioModule
 ];
 
-//Chips module import
-const chips = [
+//matChips module import
+const matChips = [
   MatChipsModule
 ];
 
-//DatePicker module import
-const datepicker = [
+//matDatePicker module import
+const matDatePicker = [
   MatDatepickerModule,
   MatNativeDateModule
 ];
 
-//Expansion-Panel module import
-const expansionPanel = [
+//matExpansion-Panel module import
+const matExpansionPanel = [
   MatExpansionModule
 ];
 
-//Grid list module import
-const gridlist = [
+//matGridlist  module import
+const matGridlist = [
   MatGridListModule
 ];
 
-//menu module import
-const menu = [
+//matMenu module import
+const matMenu = [
   MatMenuModule
 ];
 
-//spinner module import
-const spinner = [
+//matSpinner module import
+const matSpinner = [
   MatProgressSpinnerModule,
   MatSliderModule //For slider
 ];
 
-//select module import
-const select = [
+//matSelect module import
+const matSelect = [
   MatSelectModule
 ];
 
-//sidenav module inport 
-const sidenav = [
+//matSidenav module import 
+const matSidenav = [
   MatSidenavModule
-]
+];
+
+//matSlideToggle import
+const matSlideToggle = [
+  MatSlideToggleModule
+];
 
 const materialImports = [
   ...matAutoComplete,
-  ...badge,
-  ...bottomSheet,
-  ...button,
-  ...card,
-  ...checkbox,
-  ...chips,
-  ...datepicker,
-  ...expansionPanel,
-  ...gridlist,
-  ...menu,
-  ...spinner,
-  ...select,
-  ...sidenav
+  ...matBadge,
+  ...matBottomSheet,
+  ...matButton,
+  ...matCard,
+  ...matCheckBox,
+  ...matChips,
+  ...matDatePicker,
+  ...matExpansionPanel,
+  ...matGridlist,
+  ...matMenu,
+  ...matSpinner,
+  ...matSelect,
+  ...matSidenav,
+  ...matSlideToggle
 ];
 
 @NgModule({
@@ -191,6 +197,8 @@ const materialImports = [
     RipplesComponent,
     SelectComponent,
     SidenavComponent,
+    SlideToggleComponent,
+    SliderComponent,
   ],
   imports: [
     CommonModule,
@@ -225,7 +233,8 @@ const materialImports = [
     RadioButtonComponent,
     RipplesComponent,
     SelectComponent,
-    SidenavComponent
+    SidenavComponent,
+    SlideToggleComponent
   ]
 })
 export class CoreModule { }
