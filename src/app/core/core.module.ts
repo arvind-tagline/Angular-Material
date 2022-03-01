@@ -35,6 +35,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DividerComponent } from './divider/divider.component';
+import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 
 
@@ -87,6 +89,11 @@ const datepicker = [
   MatNativeDateModule
 ];
 
+//Expansion-Panel module import
+const expansionPanel = [
+  MatExpansionModule
+];
+
 
 const materialImports = [
   ...autoComplete,
@@ -96,7 +103,8 @@ const materialImports = [
   ...card,
   ...checkbox,
   ...chips,
-  ...datepicker
+  ...datepicker,
+  ...expansionPanel
 ];
 
 @NgModule({
@@ -114,6 +122,7 @@ const materialImports = [
     DialogComponent,
     DialogExampleComponent,
     DividerComponent,
+    ExpansionPanelComponent,
   ],
   imports: [
     CommonModule,
@@ -133,7 +142,8 @@ const materialImports = [
     ChipsComponent,
     DatepickerComponent,
     DialogComponent,
-    DividerComponent
+    DividerComponent,
+    ExpansionPanelComponent
   ]
 })
 export class CoreModule { }

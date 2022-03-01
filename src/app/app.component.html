@@ -12,7 +12,7 @@
         <button class="btn btn-primary m-2" (click)="currentSelected = 'datepicker'">Datepicker</button>
         <button class="btn btn-primary m-2" (click)="currentSelected = 'dialog'">Dialog</button>
         <button class="btn btn-primary m-2" (click)="currentSelected = 'divider'">Divider</button>
-
+        <button class="btn btn-primary m-2" (click)="currentSelected = 'expansionPanel'">ExpansionPanel</button>
 
     </div>
 
@@ -61,6 +61,10 @@
 
         <ng-container *ngIf="currentSelected === 'divider'">
             <app-divider></app-divider>
+        </ng-container>
+
+        <ng-container *ngIf="currentSelected === 'expansionPanel'">
+            <app-expansion-panel></app-expansion-panel>
         </ng-container>
     </div>
 </div>
