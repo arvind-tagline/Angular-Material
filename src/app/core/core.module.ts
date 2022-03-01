@@ -40,6 +40,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { FormFieldComponent } from './form-field/form-field.component';
 import { GridListComponent } from './grid-list/grid-list.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { IconComponent } from './icon/icon.component';
+import { InputComponent } from './input/input.component';
 
 
 
@@ -134,6 +136,8 @@ const materialImports = [
     ExpansionPanelComponent,
     FormFieldComponent,
     GridListComponent,
+    IconComponent,
+    InputComponent,
   ],
   imports: [
     CommonModule,
@@ -156,7 +160,9 @@ const materialImports = [
     DividerComponent,
     ExpansionPanelComponent,
     FormFieldComponent,
-    GridListComponent
+    GridListComponent,
+    IconComponent,
+    InputComponent,
   ]
 })
 export class CoreModule { }
