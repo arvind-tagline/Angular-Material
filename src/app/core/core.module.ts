@@ -45,6 +45,10 @@ import { InputComponent } from './input/input.component';
 import { ListComponent } from './list/list.component';
 import { MenuComponent } from './menu/menu.component';
 import { MatMenuModule } from '@angular/material/menu';
+import { PaginatorComponent } from './paginator/paginator.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
 
 
 
@@ -150,12 +154,15 @@ const materialImports = [
     InputComponent,
     ListComponent,
     MenuComponent,
+    PaginatorComponent,
+    ProgressBarComponent,
   ],
   imports: [
     CommonModule,
     MatDialogModule,
     FormsModule,
     ReactiveFormsModule,
+    MatPaginatorModule,
     ...materialImports
   ],
   exports: [
@@ -176,7 +183,9 @@ const materialImports = [
     IconComponent,
     InputComponent,
     ListComponent,
-    MenuComponent
+    MenuComponent,
+    PaginatorComponent,
+    ProgressBarComponent,
   ]
 })
 export class CoreModule { }

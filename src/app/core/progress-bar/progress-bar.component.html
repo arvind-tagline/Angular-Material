@@ -1,0 +1,13 @@
+<div class="m-5">
+    <h2>Progress Bar</h2>
+    <mat-progress-bar mode="determinate" [value]="value"></mat-progress-bar>
+    <button class="btn btn-primary m-3" (click)="onClick()">Increment</button>
+    <button class="btn btn-primary m-3" (click)="decrement()">Decrement</button>
+    <div class="m-3">
+        <mat-progress-bar mode="indeterminate" *ngIf="toggle"></mat-progress-bar>
+        <mat-progress-bar mode="buffer" *ngIf="toggle" class="mt-5"></mat-progress-bar>
+        <div class="m-3">
+            <button class="btn btn-primary m-3" (click)="startBar()">{{toggle?'Stop':'Start'}}</button>
+        </div>
+    </div>
+</div>
