@@ -43,6 +43,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { IconComponent } from './icon/icon.component';
 import { InputComponent } from './input/input.component';
 import { ListComponent } from './list/list.component';
+import { MenuComponent } from './menu/menu.component';
+import { MatMenuModule } from '@angular/material/menu';
+
 
 
 
@@ -101,10 +104,15 @@ const expansionPanel = [
   MatExpansionModule
 ];
 
+//Grid list module import
 const gridlist = [
   MatGridListModule
-]
+];
 
+//menu module import
+const menu = [
+  MatMenuModule
+];
 
 const materialImports = [
   ...autoComplete,
@@ -116,7 +124,8 @@ const materialImports = [
   ...chips,
   ...datepicker,
   ...expansionPanel,
-  ...gridlist
+  ...gridlist,
+  ...menu
 ];
 
 @NgModule({
@@ -140,6 +149,7 @@ const materialImports = [
     IconComponent,
     InputComponent,
     ListComponent,
+    MenuComponent,
   ],
   imports: [
     CommonModule,
@@ -165,7 +175,8 @@ const materialImports = [
     GridListComponent,
     IconComponent,
     InputComponent,
-    ListComponent
+    ListComponent,
+    MenuComponent
   ]
 })
 export class CoreModule { }
