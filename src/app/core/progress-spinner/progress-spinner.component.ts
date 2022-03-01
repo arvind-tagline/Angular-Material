@@ -9,13 +9,18 @@ import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 })
 export class ProgressSpinnerComponent implements OnInit {
 
-  color: ThemePalette = 'primary';
-  mode: ProgressSpinnerMode = 'determinate';
-  value = 50;
+  public color: ThemePalette = 'primary';
+  public mode: ProgressSpinnerMode = 'determinate';
+  public value = 50;
+  public spinner: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public startSpinner(): boolean {
+    return this.spinner = true;
   }
 
 }
