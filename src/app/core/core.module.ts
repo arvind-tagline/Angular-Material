@@ -53,6 +53,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSliderModule } from '@angular/material/slider';
 import { RadioButtonComponent } from './radio-button/radio-button.component';
 import { RipplesComponent } from './ripples/ripples.component';
+import { SelectComponent } from './select/select.component';
+import { MatSelectModule } from '@angular/material/select';
 
 
 
@@ -124,9 +126,15 @@ const menu = [
   MatMenuModule
 ];
 
+//spinner module import
 const spinner = [
   MatProgressSpinnerModule,
   MatSliderModule //For slider
+];
+
+//select module import
+const select = [
+  MatSelectModule
 ];
 
 const materialImports = [
@@ -141,7 +149,8 @@ const materialImports = [
   ...expansionPanel,
   ...gridlist,
   ...menu,
-  ...spinner
+  ...spinner,
+  ...select
 ];
 
 @NgModule({
@@ -171,6 +180,7 @@ const materialImports = [
     ProgressSpinnerComponent,
     RadioButtonComponent,
     RipplesComponent,
+    SelectComponent,
   ],
   imports: [
     CommonModule,
@@ -203,7 +213,8 @@ const materialImports = [
     ProgressBarComponent,
     ProgressSpinnerComponent,
     RadioButtonComponent,
-    RipplesComponent
+    RipplesComponent,
+    SelectComponent
   ]
 })
 export class CoreModule { }

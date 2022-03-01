@@ -1,8 +1,5 @@
 import { ThemePalette } from "@angular/material/core";
 
-export interface Allinterface {
-}
-
 export interface Task {
     name: string;
     completed: boolean;
@@ -24,4 +21,13 @@ export interface Tile {
 export interface Section {
     name: string;
     updated: Date;
+}
+
+export interface Food {
+    value: string;
+    viewValue: string;
+}
+export interface Animal {
+    name: string;
+    sound: string;
 }
