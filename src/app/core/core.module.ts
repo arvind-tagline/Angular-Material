@@ -55,6 +55,8 @@ import { RadioButtonComponent } from './radio-button/radio-button.component';
 import { RipplesComponent } from './ripples/ripples.component';
 import { SelectComponent } from './select/select.component';
 import { MatSelectModule } from '@angular/material/select';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 
 
@@ -62,8 +64,9 @@ import { MatSelectModule } from '@angular/material/select';
 
 
 
-// autocomplete modules import
-const autoComplete = [
+
+// matAutoComplete modules import
+const matAutoComplete = [
   MatAutocompleteModule,
   MatButtonModule,
   MatFormFieldModule,
@@ -137,8 +140,13 @@ const select = [
   MatSelectModule
 ];
 
+//sidenav module inport 
+const sidenav = [
+  MatSidenavModule
+]
+
 const materialImports = [
-  ...autoComplete,
+  ...matAutoComplete,
   ...badge,
   ...bottomSheet,
   ...button,
@@ -150,7 +158,8 @@ const materialImports = [
   ...gridlist,
   ...menu,
   ...spinner,
-  ...select
+  ...select,
+  ...sidenav
 ];
 
 @NgModule({
@@ -181,6 +190,7 @@ const materialImports = [
     RadioButtonComponent,
     RipplesComponent,
     SelectComponent,
+    SidenavComponent,
   ],
   imports: [
     CommonModule,
@@ -214,7 +224,8 @@ const materialImports = [
     ProgressSpinnerComponent,
     RadioButtonComponent,
     RipplesComponent,
-    SelectComponent
+    SelectComponent,
+    SidenavComponent
   ]
 })
 export class CoreModule { }
