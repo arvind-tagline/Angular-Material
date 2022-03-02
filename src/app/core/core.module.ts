@@ -60,6 +60,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { SliderComponent } from './slider/slider.component';
+import { SnackbarComponent } from './snackbar/snackbar.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 
@@ -145,9 +147,14 @@ const matSidenav = [
   MatSidenavModule
 ];
 
-//matSlideToggle import
+//matSlideToggle module import
 const matSlideToggle = [
   MatSlideToggleModule
+];
+
+//matSnackBar module import
+const matSnackBar = [
+  MatSnackBarModule
 ];
 
 const materialImports = [
@@ -165,7 +172,8 @@ const materialImports = [
   ...matSpinner,
   ...matSelect,
   ...matSidenav,
-  ...matSlideToggle
+  ...matSlideToggle,
+  ...matSnackBar
 ];
 
 @NgModule({
@@ -199,6 +207,7 @@ const materialImports = [
     SidenavComponent,
     SlideToggleComponent,
     SliderComponent,
+    SnackbarComponent,
   ],
   imports: [
     CommonModule,
@@ -235,7 +244,8 @@ const materialImports = [
     SelectComponent,
     SidenavComponent,
     SlideToggleComponent,
-    SliderComponent
+    SliderComponent,
+    SnackbarComponent
   ]
 })
 export class CoreModule { }
