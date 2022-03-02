@@ -74,6 +74,9 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { TreeComponent } from './tree/tree.component';
+import { MatTreeModule } from '@angular/material/tree';
+import { TreecheckComponent } from './treecheck/treecheck.component';
 
 
 // matAutoComplete modules import
@@ -196,6 +199,11 @@ const matToolTip = [
   MatTooltipModule
 ];
 
+//matTree module imports
+const matTree = [
+  MatTreeModule
+];
+
 const materialImports = [
   ...matAutoComplete,
   ...matBadge,
@@ -218,7 +226,8 @@ const materialImports = [
   ...matTable,
   ...matTabs,
   ...matToolBar,
-  ...matToolTip
+  ...matToolTip,
+  ...matTree
 ];
 
 @NgModule({
@@ -259,6 +268,8 @@ const materialImports = [
     TabsComponent,
     ToolbarComponent,
     TooltipComponent,
+    TreeComponent,
+    TreecheckComponent,
   ],
   imports: [
     CommonModule,
@@ -303,6 +314,8 @@ const materialImports = [
     TabsComponent,
     ToolbarComponent,
     TooltipComponent,
+    TreeComponent,
+    TreecheckComponent
   ]
 })
 export class CoreModule { }

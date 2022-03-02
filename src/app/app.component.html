@@ -57,7 +57,7 @@
             <button class="btn btn-primary m-2 w-100" (click)="currentSelected = 'menu'">Menu</button>
         </div>
         <div class="col-sm-2">
-            <button class="btn btn-primary m-2 w-100" (click)="currentSelected = 'paginator'">Paginator</button>
+            <button class="btn btn-warning m-2 w-100" (click)="currentSelected = 'paginator'">Paginator</button>
         </div>
         <div class="col-sm-2">
             <button class="btn btn-primary m-2 w-100" (click)="currentSelected = 'progressBar'">Progress Bar</button>
@@ -104,6 +104,13 @@
         </div>
         <div class="col-sm-2">
             <button class="btn btn-primary m-2 w-100" (click)="currentSelected = 'toolTip'">Tooltip</button>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-primary m-2 w-100" (click)="currentSelected = 'tree'">Tree</button>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-primary m-2 w-100" (click)="currentSelected = 'treeProgress'">Tree With
+                ProgressBar</button>
         </div>
     </div>
 
@@ -244,6 +251,14 @@
 
         <ng-container *ngIf="currentSelected === 'toolTip'">
             <app-tooltip></app-tooltip>
+        </ng-container>
+
+        <ng-container *ngIf="currentSelected === 'tree'">
+            <app-tree></app-tree>
+        </ng-container>
+
+        <ng-container *ngIf="currentSelected === 'treeProgress'">
+            <app-treecheck></app-treecheck>
         </ng-container>
     </div>
 </div>
