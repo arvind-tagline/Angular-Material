@@ -1,0 +1,67 @@
+<div class="m-3">
+    <h2>Simple Tab</h2>
+    <!-- This attribute is for set tabs position <mat-align-tabs="position"> -->
+    <!-- This attribute is for set content show time duration <animationDuration="2000ms"> -->
+    <mat-tab-group mat-align-tabs="start">
+        <mat-tab label="First"> Content 1 </mat-tab>
+        <mat-tab label="Second"> Content 2 </mat-tab>
+        <mat-tab label="Third"> Content 3 </mat-tab>
+    </mat-tab-group>
+</div>
+<div class="m-3">
+    <h2>Using custom lable template</h2>
+    <mat-tab-group>
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+                First
+            </ng-template>
+            Content 1
+        </mat-tab>
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+                Second
+            </ng-template>
+            Content 2
+        </mat-tab>
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+                Third
+            </ng-template>
+
+            Content 3
+        </mat-tab>
+    </mat-tab-group>
+
+</div>
+
+<div class="m-3">
+    <h2>Tab group with dynamically changing tabs</h2>
+    <mat-form-field appearance="fill">
+        <mat-label>Selected tab index</mat-label>
+        <input matInput type="number" [formControl]="selected">
+    </mat-form-field>
+
+    <div>
+        <button mat-raised-button class="example-add-tab-button" (click)="addTab(selectAfterAdding.checked)">
+            Add new tab
+        </button>
+        <mat-checkbox #selectAfterAdding> Select tab after adding </mat-checkbox>
+    </div>
+
+    <mat-tab-group [selectedIndex]="selected.value" (selectedIndexChange)="selected.setValue($event)">
+        <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab">
+            Contents for {{tab}} tab
+
+            <button mat-raised-button class="example-delete-tab-button" [disabled]="tabs.length === 1"
+                (click)="removeTab(index)">
+                Delete Tab
+            </button>
+        </mat-tab>
+    </mat-tab-group>
+
+</div>

@@ -96,6 +96,9 @@
         <div class="col-sm-2">
             <button class="btn btn-primary m-2 w-100" (click)="currentSelected = 'table'">Table</button>
         </div>
+        <div class="col-sm-2">
+            <button class="btn btn-primary m-2 w-100" (click)="currentSelected = 'tabs'">Tabs</button>
+        </div>
     </div>
 
 
@@ -223,6 +226,10 @@
 
         <ng-container *ngIf="currentSelected === 'table'">
             <app-table></app-table>
+        </ng-container>
+
+        <ng-container *ngIf="currentSelected === 'tabs'">
+            <app-tabs></app-tabs>
         </ng-container>
     </div>
 </div>

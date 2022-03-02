@@ -68,6 +68,9 @@ import { StepperComponent } from './stepper/stepper.component';
 import { MatStepperModule } from '@angular/material/stepper';
 import { TableComponent } from './table/table.component';
 import { MatTableModule } from '@angular/material/table';
+import { TabsComponent } from './tabs/tabs.component';
+import { MatTabsModule } from '@angular/material/tabs';
+
 
 
 
@@ -177,6 +180,11 @@ const matTable = [
   MatTableModule
 ];
 
+//matTabs module imports
+const matTabs = [
+  MatTabsModule
+];
+
 const materialImports = [
   ...matAutoComplete,
   ...matBadge,
@@ -196,7 +204,8 @@ const materialImports = [
   ...matSnackBar,
   ...matSortHeader,
   ...matStepper,
-  ...matTable
+  ...matTable,
+  ...matTabs
 ];
 
 @NgModule({
@@ -234,6 +243,7 @@ const materialImports = [
     SortHeaderComponent,
     StepperComponent,
     TableComponent,
+    TabsComponent,
   ],
   imports: [
     CommonModule,
@@ -274,7 +284,8 @@ const materialImports = [
     SnackbarComponent,
     SortHeaderComponent,
     StepperComponent,
-    TableComponent
+    TableComponent,
+    TabsComponent
   ]
 })
 export class CoreModule { }
