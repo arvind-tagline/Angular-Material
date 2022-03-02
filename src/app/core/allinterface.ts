@@ -31,3 +31,11 @@ export interface Animal {
     name: string;
     sound: string;
 }
+
+export interface Dessert {
+    calories: number;
+    carbs: number;
+    fat: number;
+    name: string;
+    protein: number;
+}

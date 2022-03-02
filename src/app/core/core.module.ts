@@ -62,7 +62,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { SliderComponent } from './slider/slider.component';
 import { SnackbarComponent } from './snackbar/snackbar.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-
+import { SortHeaderComponent } from './sort-header/sort-header.component';
+import { MatSortModule } from '@angular/material/sort';
 
 
 
@@ -157,6 +158,11 @@ const matSnackBar = [
   MatSnackBarModule
 ];
 
+//matSortHeader module import
+const matSortHeader = [
+  MatSortModule
+];
+
 const materialImports = [
   ...matAutoComplete,
   ...matBadge,
@@ -173,7 +179,8 @@ const materialImports = [
   ...matSelect,
   ...matSidenav,
   ...matSlideToggle,
-  ...matSnackBar
+  ...matSnackBar,
+  ...matSortHeader
 ];
 
 @NgModule({
@@ -208,6 +215,7 @@ const materialImports = [
     SlideToggleComponent,
     SliderComponent,
     SnackbarComponent,
+    SortHeaderComponent,
   ],
   imports: [
     CommonModule,
@@ -245,7 +253,8 @@ const materialImports = [
     SidenavComponent,
     SlideToggleComponent,
     SliderComponent,
-    SnackbarComponent
+    SnackbarComponent,
+    SortHeaderComponent
   ]
 })
 export class CoreModule { }
