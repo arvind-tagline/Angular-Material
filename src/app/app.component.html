@@ -93,7 +93,9 @@
         <div class="col-sm-2">
             <button class="btn btn-primary m-2 w-100" (click)="currentSelected = 'stepper'">Stepper</button>
         </div>
-
+        <div class="col-sm-2">
+            <button class="btn btn-primary m-2 w-100" (click)="currentSelected = 'table'">Table</button>
+        </div>
     </div>
 
 
@@ -217,6 +219,10 @@
 
         <ng-container *ngIf="currentSelected === 'stepper'">
             <app-stepper></app-stepper>
+        </ng-container>
+
+        <ng-container *ngIf="currentSelected === 'table'">
+            <app-table></app-table>
         </ng-container>
     </div>
 </div>

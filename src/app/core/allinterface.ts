@@ -39,3 +39,10 @@ export interface Dessert {
     name: string;
     protein: number;
 }
+
+export interface PeriodicElement {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+}
