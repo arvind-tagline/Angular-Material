@@ -90,6 +90,9 @@
         <div class="col-sm-2">
             <button class="btn btn-primary m-2 w-100" (click)="currentSelected = 'sortHeader'">Sort Header</button>
         </div>
+        <div class="col-sm-2">
+            <button class="btn btn-primary m-2 w-100" (click)="currentSelected = 'stepper'">Stepper</button>
+        </div>
 
     </div>
 
@@ -210,6 +213,10 @@
 
         <ng-container *ngIf="currentSelected === 'sortHeader'">
             <app-sort-header></app-sort-header>
+        </ng-container>
+
+        <ng-container *ngIf="currentSelected === 'stepper'">
+            <app-stepper></app-stepper>
         </ng-container>
     </div>
 </div>
