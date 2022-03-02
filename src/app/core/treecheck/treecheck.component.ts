@@ -1,5 +1,4 @@
 import { Component, OnInit, Injectable } from '@angular/core';
-
 import { CollectionViewer, SelectionChange, DataSource } from '@angular/cdk/collections';
 import { FlatTreeControl } from '@angular/cdk/tree';
 import { BehaviorSubject, merge, Observable } from 'rxjs';
@@ -16,46 +15,46 @@ export class DynamicFlatNode {
 
 @Injectable({ providedIn: 'root' })
 export class DynamicDatabase {
-  dataMap = new Map<string, string[]>([
+  public dataMap = new Map<string, string[]>([
     ['Fruits', ['Apple', 'Orange', 'Banana']],
     ['Vegetables', ['Tomato', 'Potato', 'Onion']],
     ['Apple', ['Fuji', 'Macintosh']],
     ['Onion', ['Yellow', 'White', 'Purple']],
   ]);
 
-  rootLevelNodes: string[] = ['Fruits', 'Vegetables'];
+  public rootLevelNodes: string[] = ['Fruits', 'Vegetables'];
 
-  initialData(): DynamicFlatNode[] {
+  public initialData(): DynamicFlatNode[] {
     return this.rootLevelNodes.map(name => new DynamicFlatNode(name, 0, true));
   }
 
-  getChildren(node: string): string[] | undefined {
+  public getChildren(node: string): string[] | undefined {
     return this.dataMap.get(node);
   }
 
-  isExpandable(node: string): boolean {
+  public isExpandable(node: string): boolean {
     return this.dataMap.has(node);
   }
 }
 
 export class DynamicDataSource implements DataSource<DynamicFlatNode> {
-  dataChange = new BehaviorSubject<DynamicFlatNode[]>([]);
+  public dataChange = new BehaviorSubject<DynamicFlatNode[]>([]);
 
   get data(): DynamicFlatNode[] {
     return this.dataChange.value;
   }
   set data(value: DynamicFlatNode[]) {
-    this._treeControl.dataNodes = value;
+    this.treeControl.dataNodes = value;
     this.dataChange.next(value);
   }
 
   constructor(
-    private _treeControl: FlatTreeControl<DynamicFlatNode>,
-    private _database: DynamicDatabase,
+    private treeControl: FlatTreeControl<DynamicFlatNode>,
+    private database: DynamicDatabase,
   ) { }
 
   connect(collectionViewer: CollectionViewer): Observable<DynamicFlatNode[]> {
-    this._treeControl.expansionModel.changed.subscribe(change => {
+    this.treeControl.expansionModel.changed.subscribe(change => {
       if (
         (change as SelectionChange<DynamicFlatNode>).added ||
         (change as SelectionChange<DynamicFlatNode>).removed
@@ -69,7 +68,7 @@ export class DynamicDataSource implements DataSource<DynamicFlatNode> {
 
   disconnect(collectionViewer: CollectionViewer): void { }
 
-  handleTreeControl(change: SelectionChange<DynamicFlatNode>) {
+  public handleTreeControl(change: SelectionChange<DynamicFlatNode>) {
     if (change.added) {
       change.added.forEach(node => this.toggleNode(node, true));
     }
@@ -82,8 +81,8 @@ export class DynamicDataSource implements DataSource<DynamicFlatNode> {
   }
 
 
-  toggleNode(node: DynamicFlatNode, expand: boolean) {
-    const children = this._database.getChildren(node.item);
+  public toggleNode(node: DynamicFlatNode, expand: boolean) {
+    const children = this.database.getChildren(node.item);
     const index = this.data.indexOf(node);
     if (!children || index < 0) {
       return;
@@ -94,7 +93,7 @@ export class DynamicDataSource implements DataSource<DynamicFlatNode> {
     setTimeout(() => {
       if (expand) {
         const nodes = children.map(
-          name => new DynamicFlatNode(name, node.level + 1, this._database.isExpandable(name)),
+          name => new DynamicFlatNode(name, node.level + 1, this.database.isExpandable(name)),
         );
         this.data.splice(index + 1, 0, ...nodes);
       } else {
@@ -128,15 +127,15 @@ export class TreecheckComponent implements OnInit {
     this.dataSource.data = database.initialData();
   }
 
-  treeControl: FlatTreeControl<DynamicFlatNode>;
+  public treeControl: FlatTreeControl<DynamicFlatNode>;
 
-  dataSource: DynamicDataSource;
+  public dataSource: DynamicDataSource;
 
-  getLevel = (node: DynamicFlatNode) => node.level;
+  public getLevel = (node: DynamicFlatNode) => node.level;
 
-  isExpandable = (node: DynamicFlatNode) => node.expandable;
+  public isExpandable = (node: DynamicFlatNode) => node.expandable;
 
-  hasChild = (_: number, _nodeData: DynamicFlatNode) => _nodeData.expandable;
+  public hasChild = (_: number, _nodeData: DynamicFlatNode) => _nodeData.expandable;
 
 
   ngOnInit(): void {

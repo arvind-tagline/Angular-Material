@@ -25,7 +25,7 @@ export class SliderComponent implements OnInit {
   }
 
 
-  getSliderTickInterval(): number | 'auto' {
+  public getSliderTickInterval(): number | 'auto' {
     if (this.showTicks) {
       return this.autoTicks ? 'auto' : this.tickInterval;
     }
