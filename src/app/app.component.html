@@ -102,6 +102,9 @@
         <div class="col-sm-2">
             <button class="btn btn-primary m-2 w-100" (click)="currentSelected = 'toolBar'">Toolbar</button>
         </div>
+        <div class="col-sm-2">
+            <button class="btn btn-primary m-2 w-100" (click)="currentSelected = 'toolTip'">Tooltip</button>
+        </div>
     </div>
 
 
@@ -237,6 +240,10 @@
 
         <ng-container *ngIf="currentSelected === 'toolBar'">
             <app-toolbar></app-toolbar>
+        </ng-container>
+
+        <ng-container *ngIf="currentSelected === 'toolTip'">
+            <app-tooltip></app-tooltip>
         </ng-container>
     </div>
 </div>
