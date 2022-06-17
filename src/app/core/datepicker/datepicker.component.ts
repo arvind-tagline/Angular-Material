@@ -13,4 +13,17 @@ export class DatepickerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  selectedDate: any;
+  name = 'Angular 6';
+
+  onSelect(event:any) {
+    console.log(event);
+    // const date=moment().format()
+    this.selectedDate = event;
+  }
+
+  onDelete(event:any) {
+    console.log('event', event)
+  }
+
 }

@@ -18,3 +18,8 @@
     <mat-calendar [(selected)]="selected"></mat-calendar>
 </mat-card>
 <p>Selected date: {{selected }}</p>
+<div class="col-sm-4">
+<mat-card>
+    <mat-calendar [selected]="selectedDate" (selectedChange)="onSelect($event)" (click)="onDelete($event)"></mat-calendar>
+</mat-card>
+</div>
